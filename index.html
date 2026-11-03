@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeloCare — Protótipo & Plano de Negócios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+    .nav-pill.active {
+      background-color: #0d9488;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(13, 148, 136, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-16">
+
+  <!-- Clean, Simple Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center text-lg font-bold">
+          🩺
+        </div>
+        <div>
+          <h1 class="font-bold text-base text-slate-900 leading-tight">ZeloCare</h1>
+          <p class="text-[11px] text-slate-500">Enfermagem, Conforto & Rotina do Idoso</p>
+        </div>
+      </div>
+      <span class="text-[11px] font-semibold bg-teal-50 text-teal-700 border border-teal-200 px-2.5 py-1 rounded-full">
+        Apresentação & Protótipo
+      </span>
+    </div>
+
+    <!-- Simple 5-Button Navigation Bar (Scrollable on Mobile) -->
+    <div class="max-w-3xl mx-auto px-4 pb-2.5 overflow-x-auto">
+      <nav class="flex gap-1.5 min-w-max text-xs font-semibold">
+        <button onclick="openView('plano')" id="btn-plano" class="nav-pill active px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
+          📄 1. Plano & Receitas
+        </button>
+        <button onclick="openView('perfil')" id="btn-perfil" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
+          🛡️ 2. Cartão Verificado
+        </button>
+        <button onclick="openView('checklist')" id="btn-checklist" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
+          🛍️ 3. Receituário Kits
+        </button>
+        <button onclick="openView('diario')" id="btn-diario" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
+          📱 4. Diário do Turno
+        </button>
+        <button onclick="openView('lotes')" id="btn-lotes" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
+          📦 5. Compra Coletiva
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 pt-5 space-y-6">
+
+    <!-- =====================================================
+         VIEW 1: PLANO DE NEGÓCIOS COMPLETO E SIMPLIFICADO
+         ===================================================== -->
+    <section id="view-plano" class="view-panel space-y-5">
+
+      <!-- Hero Intro -->
+      <div class="bg-gradient-to-br from-teal-700 to-emerald-700 text-white rounded-2xl p-5 shadow-sm space-y-2">
+        <span class="text-[11px] uppercase tracking-wider font-bold bg-white/20 px-2.5 py-0.5 rounded-full">Resumo para Sócios & Equipe</span>
+        <h2 class="text-xl font-extrabold">Ecossistema Web de Baixo Risco para Cuidado de Idosos</h2>
+        <p class="text-xs text-teal-100 leading-relaxed">
+          Um negócio digital enxuto que une <strong>Tecnologia (Luiz)</strong> + <strong>Experiência Clínica (Enfermeira Sênior)</strong> + <strong>Operação (2 Aprendizes/Estagiários de Enfermagem)</strong>, sem risco de processos de plantão e sem precisar de estoque médico da ANVISA.
+        </p>
+      </div>
+
+      <!-- 1. Conceitos Básicos Descomplicados -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-3 shadow-sm">
+        <h3 class="font-bold text-base text-slate-900">💡 1. Conceitos Básicos (Em linguagem simples)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <strong class="text-teal-800 block mb-1">O que é SaaS (Software como Serviço)?</strong>
+            É cobrar uma pequena assinatura mensal (ex: R$ 19,90 ou R$ 29,90/mês) para famílias usarem nosso <em>Diário Digital do Idoso</em> ou profissionais destacarem seu <em>Selo Verificado</em>.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <strong class="text-teal-800 block mb-1">O que é Social Commerce / Afiliados?</strong>
+            A enfermeira monta uma lista de produtos úteis para o idoso (ex: lençol deslizante, luz com sensor) e manda para os filhos. Quando a família compra pelo link, nós e a enfermeira ganhamos comissão!
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <strong class="text-teal-800 block mb-1">Produtos AVDs vs. ANVISA:</strong>
+            Equipamentos médicos exigem registro caro na ANVISA. Já itens de <strong>conforto, ergonomia e Atividades da Vida Diária (AVDs)</strong> — lençol deslizante, cinto de apoio, talheres adaptados — são livres e seguros para vender e importar.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <strong class="text-teal-800 block mb-1">Diretório Desacoplado (Sem Risco):</strong>
+            Nós conferimos o COREN e a Certidão da Polícia Federal do profissional, mas <strong>não cobramos porcentagem do plantão</strong>. A família contrata direto no WhatsApp, blindando nossa empresa de processos trabalhistas e civis.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Exemplos Reais com Links Clicáveis -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-3 shadow-sm">
+        <h3 class="font-bold text-base text-slate-900">🌎 2. Empresas de Sucesso que Inspiram Nosso Modelo (Links)</h3>
+        <div class="space-y-2 text-xs">
+          <a href="https://fullscript.com" target="_blank" class="block p-3 rounded-xl border border-slate-200 hover:border-teal-500 transition">
+            <div class="flex justify-between font-bold text-teal-700">
+              <span>🔗 Fullscript.com (EUA — Vale +US$ 1 Bilhão)</span>
+              <span>Abrir site ↗</span>
+            </div>
+            <p class="text-slate-600 mt-1">Profissionais de saúde montam receituários digitais de produtos para pacientes e ganham comissão sem ter estoque.</p>
+          </a>
+          <a href="https://www.carewell.com" target="_blank" class="block p-3 rounded-xl border border-slate-200 hover:border-teal-500 transition">
+            <div class="flex justify-between font-bold text-teal-700">
+              <span>🔗 Carewell.com (EUA — +US$ 50 Milhões/ano)</span>
+              <span>Abrir site ↗</span>
+            </div>
+            <p class="text-slate-600 mt-1">E-commerce focado 100% nas famílias de idosos, organizando kits prontos para banho seguro, acamados e prevenção de quedas.</p>
+          </a>
+          <a href="https://www.birdie.care" target="_blank" class="block p-3 rounded-xl border border-slate-200 hover:border-teal-500 transition">
+            <div class="flex justify-between font-bold text-teal-700">
+              <span>🔗 Birdie.care (Europa — +US$ 50 Milhões investidos)</span>
+              <span>Abrir site ↗</span>
+            </div>
+            <p class="text-slate-600 mt-1">Aplicativo simples onde o cuidador marca remédios e rotina no celular e os filhos acompanham em tempo real.</p>
+          </a>
+          <a href="https://acvida.com.br" target="_blank" class="block p-3 rounded-xl border border-slate-200 hover:border-teal-500 transition">
+            <div class="flex justify-between font-bold text-teal-700">
+              <span>🔗 Acvida.com.br & NonnoApp.com (Brasil)</span>
+              <span>Abrir site ↗</span>
+            </div>
+            <p class="text-slate-600 mt-1">Mostram a enorme demanda por cuidado de idosos no Brasil e o sucesso do conceito de "Diário do Cuidador".</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Fases de Crescimento, Equipe (4 Pessoas) e Investimento -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-3 shadow-sm">
+        <h3 class="font-bold text-base text-slate-900">🚀 3. Plano em 4 Fases (Investimento Baixo e Escalonado)</h3>
+        <p class="text-xs text-slate-500">Só passamos para a fase seguinte quando a fase anterior já estiver dando lucro!</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+                <th class="p-2.5 font-bold">Fase</th>
+                <th class="p-2.5 font-bold">O que entra no ar</th>
+                <th class="p-2.5 font-bold">Investimento</th>
+                <th class="p-2.5 font-bold">Papel das 4 Pessoas (Luiz + Enfermeira + 2 Aprendizes)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="p-2.5 font-bold text-teal-800">Fase 1<br/><span class="text-[10px] font-normal text-slate-500">Mês 1–2</span></td>
+                <td class="p-2.5">Cartão Verificado + Checklist de Produtos (via Afiliados Amazon/ML, <strong>sem estoque</strong>)</td>
+                <td class="p-2.5 font-bold text-emerald-700">R$ 150 a R$ 500</td>
+                <td class="p-2.5 text-[11px]"><strong>Luiz:</strong> Cria o sistema.<br/><strong>Enfermeira:</strong> Escolhe os 15 produtos e perguntas do checklist.<br/><strong>2 Aprendizes:</strong> Cadastram colegas e checam certidões COREN/PF.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-teal-800">Fase 2<br/><span class="text-[10px] font-normal text-slate-500">Mês 3–4</span></td>
+                <td class="p-2.5">Diário Digital do Turno + Assinatura SaaS (R$ 19,90 / R$ 29,90)</td>
+                <td class="p-2.5 font-bold text-emerald-700">R$ 500 a R$ 1.200<br/><span class="text-[10px] font-normal">(Pago c/ Fase 1)</span></td>
+                <td class="p-2.5 text-[11px]"><strong>Luiz:</strong> Ativa o Diário e Pix automático.<br/><strong>Enfermeira:</strong> Grava dicas práticas e valida sinais do diário.<br/><strong>2 Aprendizes:</strong> Suporte no WhatsApp às famílias e cuidadores.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-teal-800">Fase 3<br/><span class="text-[10px] font-normal text-slate-500">Mês 5–7</span></td>
+                <td class="p-2.5">Compra Coletiva / Importação dos <strong>5 produtos campeões</strong> (isentos ANVISA)</td>
+                <td class="p-2.5 font-bold text-amber-700">R$ 2.500 a R$ 5.000<br/><span class="text-[10px] font-normal">(Caixa da Fase 2)</span></td>
+                <td class="p-2.5 text-[11px]"><strong>Luiz:</strong> Painel de lotes e comissões.<br/><strong>Enfermeira:</strong> Aprova amostras dos kits.<br/><strong>2 Aprendizes:</strong> Embalam e enviam pacotes nos Correios 2x/semana.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-teal-800">Fase 4<br/><span class="text-[10px] font-normal text-slate-500">Mês 8–12</span></td>
+                <td class="p-2.5">Kits Prontos de Alta Hospitalar + Parcerias com Clínicas</td>
+                <td class="p-2.5 font-bold text-amber-700">Reinvestimento do lucro</td>
+                <td class="p-2.5 text-[11px]">Expansão regional e parcerias com geriatras, hospitais e cursos de cuidadores.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 4. Tabela de Expectativa de Receita -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-3 shadow-sm">
+        <h3 class="font-bold text-base text-slate-900">💰 4. Expectativa de Receita Mensal por Fase</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-emerald-50 text-emerald-950 border-b border-emerald-200">
+                <th class="p-2.5 font-bold">Fase</th>
+                <th class="p-2.5 font-bold">Profissionais & Famílias</th>
+                <th class="p-2.5 font-bold">Assinaturas (SaaS)</th>
+                <th class="p-2.5 font-bold">Lucro c/ Kits & Produtos</th>
+                <th class="p-2.5 font-bold">Receita Líquida / Mês</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="p-2.5 font-bold">Fase 1 (Mês 2)</td>
+                <td class="p-2.5">20 Pro + 40 compras afiliadas</td>
+                <td class="p-2.5">R$ 398</td>
+                <td class="p-2.5">R$ 720 (Afiliado)</td>
+                <td class="p-2.5 font-extrabold text-emerald-700">R$ 1.118 / mês</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">Fase 2 (Mês 4)</td>
+                <td class="p-2.5">70 Pro + 80 Diários + 90 compras</td>
+                <td class="p-2.5">R$ 3.785</td>
+                <td class="p-2.5">R$ 2.250</td>
+                <td class="p-2.5 font-extrabold text-emerald-700">R$ 6.035 / mês</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">Fase 3 (Mês 7)</td>
+                <td class="p-2.5">180 Pro + 200 Diários + 120 Kits próprios</td>
+                <td class="p-2.5">R$ 9.562</td>
+                <td class="p-2.5">R$ 11.400 (Lote próprio)</td>
+                <td class="p-2.5 font-extrabold text-emerald-700">R$ 20.962 / mês</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">Fase 4 (Mês 12)</td>
+                <td class="p-2.5">450 Pro + 500 Diários + 300 Kits próprios</td>
+                <td class="p-2.5">R$ 23.905</td>
+                <td class="p-2.5">R$ 28.500 (Lote próprio)</td>
+                <td class="p-2.5 font-extrabold text-emerald-700">R$ 52.405 / mês</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5. Formalização (CPF -> MEI -> LTDA) e Blindagem Jurídica -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-2 shadow-sm text-xs">
+          <h4 class="font-bold text-sm text-slate-900">🏢 5. CNPJ pelo Caminho (Sem gasto no início)</h4>
+          <p class="text-slate-600">• <strong>Mês 1–2 (CPF):</strong> Testamos o site e recebemos comissões da Amazon/Mercado Livre no CPF (Custo R$ 0).</p>
+          <p class="text-slate-600">• <strong>Mês 2–5 (MEI — R$ 75/mês):</strong> Como nosso negócio é <em>Comércio de Artigos de Conforto + Promoção de Vendas</em> (e não clínica médica), abrimos MEI gratuito para faturar até R$ 6.750/mês.</p>
+          <p class="text-slate-600">• <strong>Mês 6+ (Sociedade LTDA):</strong> Ao passar de R$ 6.500/mês, migramos para Microempresa (LTDA), blindando o patrimônio pessoal dos sócios, habilitando importação Radar e contratando os 2 aprendizes via <strong>Lei do Estágio (sem FGTS/INSS)</strong>.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-2 shadow-sm text-xs">
+          <h4 class="font-bold text-sm text-slate-900">⚖️ 6. Avaliação e Blindagem de Riscos Legais</h4>
+          <p class="text-slate-600">• <strong>CDC / STJ (Erro em Plantão):</strong> <span class="text-emerald-700 font-bold">Risco Mínimo.</span> Não cobramos comissão sobre o plantão nem escalamos horários; a família contrata direto no WhatsApp após aceitar o Termo de Ciência.</p>
+          <p class="text-slate-600">• <strong>COREN vs. Cuidador:</strong> <span class="text-emerald-700 font-bold">Risco Zero.</span> O sistema separa visualmente quem tem <em>COREN Ativo</em> de quem é <em>Cuidador (restrito a AVDs)</em>.</p>
+          <p class="text-slate-600">• <strong>ANVISA:</strong> <span class="text-emerald-700 font-bold">Risco Zero.</span> Produtos clínicos são vendidos via afiliados nacionais; importação própria só de itens ergonômicos/domésticos isentos.</p>
+        </div>
+      </div>
+
+      <div class="text-center pt-2">
+        <button onclick="openView('perfil')" class="bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-md transition">
+          Testar as Telas do Protótipo Agora →
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         VIEW 2: CARTÃO PROFISSIONAL VERIFICADO (SIMPLIFICADO)
+         ===================================================== -->
+    <section id="view-perfil" class="view-panel hidden space-y-4">
+      <div class="flex items-center justify-between bg-teal-50 border border-teal-200 rounded-xl px-4 py-2.5 text-xs">
+        <span class="font-semibold text-teal-900">Alternar visualização de perfil:</span>
+        <select onchange="switchRole(this.value)" class="bg-white border border-teal-300 rounded-lg px-2.5 py-1 font-bold text-teal-800">
+          <option value="enf">👩‍⚕️ Enfermeira (COREN Ativo)</option>
+          <option value="cuid">🧑‍🤝‍🧑 Cuidador (Apenas AVDs)</option>
+        </select>
+      </div>
+
+      <!-- Main Profile Card -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="bg-teal-700 text-white p-5 flex items-center gap-4">
+          <div class="w-16 h-16 rounded-2xl bg-white text-teal-800 flex items-center justify-center text-3xl shrink-0 shadow">
+            👩‍⚕️
+          </div>
+          <div class="flex-1">
+            <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-emerald-400/20 text-emerald-100 border border-emerald-300/30 px-2 py-0.5 rounded-full mb-1">
+              ✓ Documentos Verificados
+            </span>
+            <h2 id="p-name" class="text-lg font-bold">Enfª. Juliana Martins</h2>
+            <p id="p-badge" class="text-xs text-teal-100">COREN-SP 482.910-ENF • 8 anos de experiência</p>
+          </div>
+        </div>
+
+        <div class="p-5 space-y-4">
+          <!-- Scope Banner -->
+          <div id="p-scope" class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900">
+            <strong>🩺 Habilitação COREN Ativa:</strong> Autorizada para procedimentos técnicos de enfermagem, curativos, sondas, medicação e adaptação do lar.
+          </div>
+
+          <!-- 3 Simple Verification Badges -->
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-base block">🪪</span>
+              <strong class="text-slate-800 block mt-0.5">Identidade</strong>
+              <span class="text-[10px] text-emerald-600 font-bold">Validada Gov.br</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-base block">⚖️</span>
+              <strong class="text-slate-800 block mt-0.5">Antecedentes</strong>
+              <span class="text-[10px] text-emerald-600 font-bold">Nada Consta PF</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="text-base block">⭐</span>
+              <strong class="text-slate-800 block mt-0.5">Avaliações</strong>
+              <span class="text-[10px] text-amber-600 font-bold">4.9 (14 famílias)</span>
+            </div>
+          </div>
+
+          <!-- Family Testimonials -->
+          <div class="space-y-2 pt-1">
+            <h3 class="text-xs font-bold uppercase text-slate-400">Depoimentos de Famílias Verificadas</h3>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 text-xs space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>Roberto M. (Filho de paciente, 86 anos)</span>
+                <span class="text-amber-500">★★★★★</span>
+              </div>
+              <p class="text-slate-600">"A Juliana adaptou o quarto da minha mãe e indicou o lençol deslizante e as luzes de sensor. Acabou o risco de queda à noite."</p>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+            <button onclick="document.getElementById('modal-termo').classList.remove('hidden')" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-sm transition">
+              💬 Chamar Direto no WhatsApp
+            </button>
+            <button onclick="openView('checklist')" class="w-full py-3 bg-teal-50 hover:bg-teal-100 text-teal-800 font-bold text-xs rounded-xl border border-teal-200 transition">
+              🛍️ Ver Receituário de Produtos dela →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         VIEW 3: GERADOR DE RECEITUÁRIO / KITS (SIMPLIFICADO)
+         ===================================================== -->
+    <section id="view-checklist" class="view-panel hidden space-y-4">
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
+        <div>
+          <span class="text-[11px] font-bold text-teal-700 uppercase">Passo 1 • Preenchido pela Enfermeira</span>
+          <h2 class="text-base font-bold text-slate-900">Marque o que o idoso precisa em casa:</h2>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <input type="checkbox" checked onchange="calcKit()" data-name="Lençol Deslizante Tubular (Vira acamado sem esforço)" data-val="89.90" class="kit-cb w-4 h-4 accent-teal-600" />
+              <span class="font-semibold text-slate-800">🛏️ Acamado / Difícil de virar na cama (Lençol Deslizante)</span>
+            </div>
+            <span class="font-bold text-teal-700">R$ 89,90</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <input type="checkbox" checked onchange="calcKit()" data-name="Cinto Ergonômico com 6 Alças para Levantar" data-val="119.90" class="kit-cb w-4 h-4 accent-teal-600" />
+              <span class="font-semibold text-slate-800">🚶 Fraqueza ao levantar da cama/cadeira (Cinto c/ Alças)</span>
+            </div>
+            <span class="font-bold text-teal-700">R$ 119,90</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <input type="checkbox" checked onchange="calcKit()" data-name="Kit 3 Luzes de Rodapé com Sensor Automático" data-val="74.90" class="kit-cb w-4 h-4 accent-teal-600" />
+              <span class="font-semibold text-slate-800">🌙 Levanta à noite no escuro (Kit Luz Sensor de Passo)</span>
+            </div>
+            <span class="font-bold text-teal-700">R$ 74,90</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <input type="checkbox" onchange="calcKit()" data-name="Kit Talheres Adaptados Anti-Tremor" data-val="139.90" class="kit-cb w-4 h-4 accent-teal-600" />
+              <span class="font-semibold text-slate-800">🥄 Tremor nas mãos ao comer (Talheres Anti-Tremor)</span>
+            </div>
+            <span class="font-bold text-teal-700">R$ 139,90</span>
+          </label>
+        </div>
+
+        <!-- Result Box -->
+        <div class="p-4 rounded-xl bg-teal-50 border border-teal-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs text-teal-800 block">Total do Kit para a Família:</span>
+              <strong id="kit-total" class="text-xl font-extrabold text-teal-950">R$ 284,70</strong>
+            </div>
+            <div class="text-right">
+              <span class="text-[11px] text-emerald-800 block font-semibold">Comissão da Enfermeira (15%):</span>
+              <strong id="kit-comm" class="text-base font-extrabold text-emerald-700">R$ 42,70</strong>
+            </div>
+          </div>
+
+          <button onclick="alert('Link do Kit copiado e pronto para enviar no WhatsApp dos filhos do idoso!')" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-sm transition">
+            📲 Enviar Receituário de Conforto no WhatsApp da Família
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         VIEW 4: DIÁRIO DO TURNO SIMPLIFICADO
+         ===================================================== -->
+    <section id="view-diario" class="view-panel hidden space-y-4">
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-blue-700 uppercase">Uso Diário • R$ 29,90/mês para a Família</span>
+            <h2 class="text-base font-bold text-slate-900">Diário Rápido — Dona Helena (81a)</h2>
+          </div>
+          <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Plantão Hoje</span>
+        </div>
+
+        <!-- 4 Simple Check Buttons -->
+        <div class="grid grid-cols-2 gap-2.5 text-xs">
+          <button onclick="this.classList.toggle('bg-emerald-50'); this.classList.toggle('border-emerald-500')" class="p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-left font-bold text-slate-800">
+            💊 Remédios no Horário ✓
+          </button>
+          <button onclick="this.classList.toggle('bg-emerald-50'); this.classList.toggle('border-emerald-500')" class="p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-left font-bold text-slate-800">
+            🍲 Almoçou Bem (100%) ✓
+          </button>
+          <button onclick="this.classList.toggle('bg-emerald-50'); this.classList.toggle('border-emerald-500')" class="p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-left font-bold text-slate-800">
+            ❤️ Pressão: 12x8 Normal ✓
+          </button>
+          <button onclick="this.classList.toggle('bg-emerald-50'); this.classList.toggle('border-emerald-500')" class="p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-left font-bold text-slate-800">
+            🔄 Mudança Decúbito 2h ✓
+          </button>
+        </div>
+
+        <!-- Low Supply Trigger -->
+        <div class="p-4 rounded-xl bg-rose-50 border border-rose-200 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <strong class="text-xs text-rose-900">⚠️ Avisar aos filhos que está acabando:</strong>
+            <span class="text-[10px] bg-rose-200 text-rose-900 px-2 py-0.5 rounded font-bold">Gera venda automática</span>
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="bg-white border border-rose-300 px-2.5 py-1 rounded-lg font-semibold text-rose-900">✓ Fralda G (Pacote) — R$ 64,90</span>
+            <span class="bg-white border border-rose-300 px-2.5 py-1 rounded-lg font-semibold text-rose-900">✓ Creme de Barreira — R$ 49,90</span>
+          </div>
+          <button onclick="alert('Resumo do plantão + Link de Reposição enviado para o WhatsApp dos filhos!')" class="w-full py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl transition">
+            📲 Enviar Resumo do Dia + Link de Compra para os Filhos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         VIEW 5: COMPRA COLETIVA / LOTES (FASE 3)
+         ===================================================== -->
+    <section id="view-lotes" class="view-panel hidden space-y-4">
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
+        <div>
+          <span class="text-[11px] font-bold text-purple-700 uppercase">Fase 3 • Importação Direta dos Campeões de Venda</span>
+          <h2 class="text-base font-bold text-slate-900">Lotes de Compra Coletiva (Isentos de ANVISA)</h2>
+          <p class="text-xs text-slate-500">Quando o lote atinge a meta, importamos com custo baixo e altíssima margem.</p>
+        </div>
+
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl border border-slate-200 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Lote 88% Fechado (44/50)</span>
+              <span class="text-xs text-slate-500">Custo: R$ 32 • Venda: <strong class="text-teal-700">R$ 119</strong></span>
+            </div>
+            <h3 class="font-bold text-sm text-slate-800">Kit 2x Lençóis Deslizantes para Virar Acamados</h3>
+            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+              <div class="bg-teal-600 h-full" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl border border-slate-200 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Lote 95% Fechado (38/40)</span>
+              <span class="text-xs text-slate-500">Custo: R$ 48 • Venda: <strong class="text-teal-700">R$ 159</strong></span>
+            </div>
+            <h3 class="font-bold text-sm text-slate-800">Sensor Noturno de Saída de Cama + Alarme SOS Sem Fio</h3>
+            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+              <div class="bg-emerald-600 h-full" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Simple Modal for Legal Disclaimer -->
+  <div id="modal-termo" class="fixed inset-0 bg-slate-900/60 hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-5 space-y-3 shadow-xl">
+      <h3 class="font-bold text-sm text-slate-900">🛡️ Aviso Rápido de Contratação Direta</h3>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        A ZeloCare confere os documentos públicos do profissional, mas <strong>não intermedia pagamentos nem plantões</strong>. Você combinará valores e horários diretamente no WhatsApp da profissional.
+      </p>
+      <div class="flex justify-end gap-2 pt-2">
+        <button onclick="document.getElementById('modal-termo').classList.add('hidden')" class="px-3 py-2 text-xs text-slate-500 font-semibold">Voltar</button>
+        <button onclick="document.getElementById('modal-termo').classList.add('hidden'); alert('Abrindo WhatsApp da profissional!');" class="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded-xl">
+          Entendi • Abrir WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openView(name) {
+      document.querySelectorAll('.view-panel').forEach(el => el.classList.add('hidden'));
+      document.getElementById('view-' + name).classList.remove('hidden');
+      document.querySelectorAll('.nav-pill').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + name).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchRole(val) {
+      if (val === 'enf') {
+        document.getElementById('p-name').textContent = 'Enfª. Juliana Martins';
+        document.getElementById('p-badge').textContent = 'COREN-SP 482.910-ENF • 8 anos de experiência';
+        document.getElementById('p-scope').className = 'p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900';
+        document.getElementById('p-scope').innerHTML = '<strong>🩺 Habilitação COREN Ativa:</strong> Autorizada para procedimentos técnicos de enfermagem, curativos, sondas, medicação e adaptação do lar.';
+      } else {
+        document.getElementById('p-name').textContent = 'Carlos Eduardo Silva';
+        document.getElementById('p-badge').textContent = 'Cuidador de Idosos • CBO 5162-10';
+        document.getElementById('p-scope').className = 'p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900';
+        document.getElementById('p-scope').innerHTML = '<strong>🤝 Escopo de Cuidador (Apenas AVDs):</strong> Auxílio em higiene, alimentação, companhia e rotina. Vedados procedimentos invasivos de enfermagem.';
+      }
+    }
+
+    function calcKit() {
+      let total = 0;
+      document.querySelectorAll('.kit-cb:checked').forEach(cb => {
+        total += parseFloat(cb.getAttribute('data-val'));
+      });
+      const comm = total * 0.15;
+      document.getElementById('kit-total').textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
+      document.getElementById('kit-comm').textContent = 'R$ ' + comm.toFixed(2).replace('.', ',');
+    }
+  </script>
+</body>
+</html>
