@@ -68,8 +68,11 @@
         <button onclick="openView('plano')" id="btn-plano" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
           📄 2. Relatório Completo, Fases & Receitas
         </button>
+        <button onclick="openView('ampliado')" id="btn-ampliado" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
+          🧩 3. Novas Oportunidades (TEA, Acamados & PcD)
+        </button>
         <button onclick="openView('simulador')" id="btn-simulador" class="nav-pill px-3.5 py-2 rounded-xl bg-slate-100 text-slate-600 transition">
-          ⚡ 3. Testar Simulador Interativo
+          ⚡ 4. Testar Simulador Interativo
         </button>
       </nav>
     </div>
@@ -780,6 +783,196 @@
           </table>
         </div>
       </div>
+    </section>
+
+    <!-- =====================================================
+         VIEW 2.5: NOVAS OPORTUNIDADES (IDOSOS, TEA/NEURODIVERGENTES, ACAMADOS & PCD)
+         ===================================================== -->
+    <section id="view-ampliado" class="view-panel hidden space-y-6">
+
+      <div class="bg-gradient-to-r from-indigo-800 via-teal-800 to-emerald-700 text-white rounded-2xl p-5 shadow-sm space-y-2">
+        <span class="text-[10px] uppercase tracking-wider font-bold bg-white/20 px-2.5 py-0.5 rounded-full">Expansão de Mercado (55+ Milhões de Brasileiros)</span>
+        <h2 class="text-xl font-extrabold">Economia do Cuidado Generalista: Idosos, Neurodivergentes (TEA/TDAH), Acamados & PcD</h2>
+        <p class="text-xs text-teal-100 leading-relaxed">
+          Usando a <strong>mesma plataforma Web</strong>, multiplicamos o mercado por 4x ao incluir <strong>Acompanhantes Terapêuticos (ATs), Terapeutas Ocupacionais (TOs) e Mediadores Escolares</strong>, além de linhas de altíssima margem como <strong>Regulação Sensorial, Moda Adaptada e Alta Hospitalar</strong>.
+        </p>
+      </div>
+
+      <!-- Os 4 Públicos Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-1">
+          <span class="text-2xl">👴</span>
+          <h3 class="font-bold text-slate-900">1. Idosos (33M+)</h3>
+          <p class="text-slate-500 text-[11px]">Prevenção de quedas, Alzheimer, Parkinson, companhia e adaptação do lar.</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-indigo-200 shadow-sm space-y-1">
+          <span class="text-2xl">🧩</span>
+          <h3 class="font-bold text-indigo-950">2. Neurodivergentes (6M+)</h3>
+          <p class="text-slate-500 text-[11px]">Autismo (TEA 2,4M+), TDAH, Down: regulação sensorial, rotina visual e ATs/Mediadores.</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-teal-200 shadow-sm space-y-1">
+          <span class="text-2xl">🛏️</span>
+          <h3 class="font-bold text-teal-950">3. Acamados & Pós-Alta</h3>
+          <p class="text-slate-500 text-[11px]">Pós-AVC, ortopedia, cirurgias: kits urgentes de transição hospital-casa em 48h.</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-emerald-200 shadow-sm space-y-1">
+          <span class="text-2xl">♿</span>
+          <h3 class="font-bold text-emerald-950">4. PcD & Mobilidade (18M+)</h3>
+          <p class="text-slate-500 text-[11px]">Moda inclusiva (velcro/ímã), utensílios de autonomia (AVDs) e acessibilidade portátil.</p>
+        </div>
+      </div>
+
+      <!-- Quadro das 8 Oportunidades, Margens e Riscos -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-3 shadow-sm">
+        <h3 class="font-bold text-base text-slate-900">📊 Quadro de Novas Ideias, Oportunidades, Margens e Riscos Legais</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+                <th class="p-2.5 font-bold">Oportunidade / Produto</th>
+                <th class="p-2.5 font-bold">Público & Indicadores</th>
+                <th class="p-2.5 font-bold">Como Funciona</th>
+                <th class="p-2.5 font-bold">Margem</th>
+                <th class="p-2.5 font-bold">Risco Legal / Como Blindar</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="p-2.5 font-bold text-indigo-900">1. Receituário Sensorial & Rotina (TEA / TDAH)</td>
+                <td class="p-2.5">Pais de autistas, TOs, Fono e ATs</td>
+                <td class="p-2.5">TO/AT monta checklist sensorial (abafador, cobertor pesado, rede de lycra, timer visual) e manda aos pais.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 Altíssima (150%–250%)</td>
+                <td class="p-2.5 text-[11px]"><strong>Atenção INMETRO (Portaria 302/21):</strong> Brinquedos infantis só via Afiliado Nacional; importar apenas <strong>têxteis, redes de descanso e timers de mesa</strong>.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-teal-900">2. Moda Inclusiva & Vestuário Adaptado</td>
+                <td class="p-2.5">Acamados, Cadeirantes, Pós-Cirúrgico e TEA</td>
+                <td class="p-2.5">Roupas com abertura em velcro/ímã (veste acamado sem levantar os braços) e roupas sensoriais sem costura.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 Altíssima (200%+)</td>
+                <td class="p-2.5 text-[11px]"><strong>🟢 Risco Zero (ANVISA/INMETRO):</strong> Vestuário comum adaptado é livre de registro sanitário!</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-teal-900">3. Kits "Alta Hospitalar 48h"</td>
+                <td class="p-2.5">Pós-AVC, fratura de fêmur, pós-UTI</td>
+                <td class="p-2.5">Enfermeira indica o Kit Transição (lençol deslizante + banho a seco + cunha postural + luz noturna).</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 Alta (Ticket R$ 400+)</td>
+                <td class="p-2.5 text-[11px]"><strong>🟢 Baixo:</strong> Cosméticos de banho a seco de marcas nacionais registradas + têxteis ergonômicos livres.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-indigo-900">4. Cartão Verificado de ATs & Mediadores Escolares</td>
+                <td class="p-2.5">Famílias TEA/PcD e Escolas Particulares</td>
+                <td class="p-2.5">Perfil com antecedentes criminais (PF) checados, certificados ABA/Inclusão e depoimentos de mães verificadas.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 Alta (SaaS R$ 24,90/mês)</td>
+                <td class="p-2.5 text-[11px]"><strong>Lei Berenice Piana & LBI:</strong> Separar visualmente <em>AT Clínico (Saúde)</em> de <em>Mediador/Apoio Escolar (LBI)</em>, sem intermediar salário.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-blue-900">5. Diário "Casa-Escola-Terapia" (TEA & Acamados)</td>
+                <td class="p-2.5">Pais de crianças atípicas e filhos de acamados</td>
+                <td class="p-2.5">AT ou cuidador registra no celular: crises sensoriais, alimentação, sono, medicação e reposição de itens.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 Alta (SaaS R$ 29,90/mês)</td>
+                <td class="p-2.5 text-[11px]"><strong>🟢 Risco Mínimo:</strong> Diário comportamental e de rotina protegido por link privado (LGPD).</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-emerald-900">6. Quadros de Rotina Visual & Comunicação (CAA)</td>
+                <td class="p-2.5">Autistas não-verbais, Idosos pós-AVC (afasia) e Alzheimer</td>
+                <td class="p-2.5">Pranchas magnéticas ilustradas ("Estou com dor/sede", rotina manhã/noite) para apontar sem falar.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 Altíssima (300%+)</td>
+                <td class="p-2.5 text-[11px]"><strong>🟢 Risco Zero:</strong> Material gráfico/pedagógico isento de qualquer regulação sanitária.</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-purple-900">7. Tele-Orientação "Casa Segura" (COFEN 696/22)</td>
+                <td class="p-2.5">Famílias de acamados, idosos ou PcD</td>
+                <td class="p-2.5">Família envia vídeo do quarto/banheiro e paga R$ 89 pelo Laudo de Adaptação assinado pela Enfermeira Sênior.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟢 100% Margem + Kits</td>
+                <td class="p-2.5 text-[11px]"><strong>🟢 100% Legalizado:</strong> A Resolução COFEN 696/2022 autoriza Teleconsulta/Orientação de Enfermagem!</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold text-amber-900">8. Aluguel Local (*Rental*) Pós-Operatório (Lead-Gen)</td>
+                <td class="p-2.5">Pacientes temporários (30 a 90 dias)</td>
+                <td class="p-2.5">Botão "Alugar Cama/Cadeira de Rodas/Muleta": repassamos o cliente para locadoras locais por 20% de comissão.</td>
+                <td class="p-2.5 font-bold text-emerald-700">🟡 Média (Sem estoque)</td>
+                <td class="p-2.5 text-[11px]"><strong>🟢 Risco Zero:</strong> A locadora parceira local detém o equipamento e a responsabilidade técnica.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mockup Visual: Como fica o Modo Neurodivergente (TEA) e Acamados no Celular -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-5 md:p-7 shadow-sm space-y-5">
+        <h3 class="text-base font-extrabold text-slate-900 text-center">📱 Mockups: Como a Mesma Plataforma Atende Autismo (TEA) e Acamados/PcD</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- Mockup TEA / Neurodivergente -->
+          <div class="space-y-2">
+            <p class="text-center text-xs font-bold text-indigo-700 uppercase">🧩 Mockup A: Diário & Kit Sensorial (Autismo / TEA)</p>
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="bg-indigo-700 text-white p-3.5 flex items-center justify-between">
+                <div>
+                  <span class="text-[9px] text-indigo-200 uppercase font-bold block">Acompanhante Terapêutica (AT)</span>
+                  <h4 class="font-bold text-xs">Aluno: Lucas (7 anos • TEA)</h4>
+                </div>
+                <span class="text-[9px] bg-white/20 px-2 py-0.5 rounded font-bold">Turno Escolar</span>
+              </div>
+              <div class="p-3.5 space-y-2.5 text-[11px]">
+                <div class="grid grid-cols-2 gap-2 text-[10px]">
+                  <div class="p-2 rounded-xl bg-emerald-50 border border-emerald-400 font-bold text-emerald-950">
+                    🎧 Regulação<br/><span class="text-[9px] text-emerald-700">✓ Usou Abafador</span>
+                  </div>
+                  <div class="p-2 rounded-xl bg-emerald-50 border border-emerald-400 font-bold text-emerald-950">
+                    🍱 Lanche Adaptado<br/><span class="text-[9px] text-emerald-700">✓ Aceitou bem</span>
+                  </div>
+                  <div class="p-2 rounded-xl bg-indigo-50 border border-indigo-300 font-bold text-indigo-950">
+                    🗣️ Comunicação CAA<br/><span class="text-[9px] text-indigo-700">✓ Apontou 4 cartões</span>
+                  </div>
+                  <div class="p-2 rounded-xl bg-amber-50 border border-amber-300 font-bold text-amber-950">
+                    ⚡ Sobrecarga<br/><span class="text-[9px] text-amber-700">1x Leve (Recreio)</span>
+                  </div>
+                </div>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-2.5 space-y-1 text-[10px]">
+                  <strong class="text-indigo-950 block">🛍️ Recomendado pela TO / AT para Casa:</strong>
+                  <p class="text-slate-600">• Rede Casulo Sensorial de Lycra (R$ 139)</p>
+                  <p class="text-slate-600">• Quadro Magnético Rotina Visual (R$ 69)</p>
+                  <div class="bg-indigo-600 text-white text-center py-1.5 rounded-lg font-bold mt-1">
+                    Enviar Resumo + Kit p/ Mãe no WhatsApp
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mockup Acamados / Moda Adaptada & Alta Hospitalar -->
+          <div class="space-y-2">
+            <p class="text-center text-xs font-bold text-teal-700 uppercase">🛏️ Mockup B: Kit Alta Hospitalar & Moda Inclusiva (Acamados/PcD)</p>
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="bg-teal-800 text-white p-3.5 flex items-center justify-between">
+                <div>
+                  <span class="text-[9px] text-teal-200 uppercase font-bold block">Transição Hospital → Casa</span>
+                  <h4 class="font-bold text-xs">Kit Pós-AVC & Acamado Sem Dor</h4>
+                </div>
+                <span class="text-[9px] bg-emerald-500/30 px-2 py-0.5 rounded font-bold">Entrega 24h</span>
+              </div>
+              <div class="p-3.5 space-y-2.5 text-[10px]">
+                <div class="bg-white p-2.5 rounded-xl border border-slate-200 space-y-1.5">
+                  <span class="bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded text-[9px]">Livre de ANVISA • Moda Adaptada</span>
+                  <strong class="block text-slate-900 text-[11px]">1. Pijama/Camisola Hospitalar em Casa (Fecho Magnético/Velcro Total)</strong>
+                  <p class="text-slate-500">Veste o paciente acamado sem precisar levantar os braços ou virar com dor.</p>
+                </div>
+                <div class="bg-white p-2.5 rounded-xl border border-slate-200 space-y-1.5">
+                  <span class="bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded text-[9px]">Comunicação Pós-AVC</span>
+                  <strong class="block text-slate-900 text-[11px]">2. Prancha "Aponte o que Sente" + Campainha SOS no Dedo</strong>
+                  <p class="text-slate-500">Permite ao paciente sem fala apontar dor, sede, posição ou chamar ajuda com 1 toque leve.</p>
+                </div>
+                <div class="bg-emerald-600 text-white text-center py-2.5 rounded-xl font-bold text-xs shadow">
+                  🛒 Comprar Kit Alta Hospitalar (R$ 249,90)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- =====================================================
